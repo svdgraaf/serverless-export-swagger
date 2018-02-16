@@ -50,7 +50,7 @@ const exportApi = function exportApi(serverless) {
               && 's3KeyName' in settings.swaggerDestinations
             ) {
               var acl = 'private';
-              if ('ACL' in settings.swaggerDestinations) {
+              if ('acl' in settings.swaggerDestinations) {
                 acl = settings.swaggerDestinations.acl;
               }
               serverless.getProvider('aws').request(
